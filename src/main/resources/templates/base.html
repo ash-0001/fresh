@@ -22,27 +22,29 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Smart contact Manager</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto text-uppercase">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" th:href="@{/home/}" href="#">Home</a></li>
-
-            <li class="nav-item"><a class="nav-link" th:href="@{/about/}" href="#">About</a></li>
-
-            <li class="nav-item"><a class="nav-link" href="#" th:href="@{/signin}">Login</a></li>
-
-            <li class="nav-item"><a class="nav-link" th:href="@{/signup/}" href="#">Signup</a></li>
-          </ul>
-        </div>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">JoGeek</div>
       </div>
-    </nav>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a th:href="@{/home/}" target="_blank">Home</a>
+        <a href="" target="_blank">Stackoverflow</a>
+        <a th:href="@{/about/}" target="_blank">About</a>
+        <a th:href="@{/signup/}" target="_blank">Signup</a>
+        <a th:href="@{/signin}" target="_blank">sign-in</a>
+      </div>
+    </div>
+
     <!-- navbar  -->
 
     <div th:replace="${content}"></div>
