@@ -16,7 +16,7 @@
         <th:block th:text="${#session.removeAttribute('message')}"></th:block>
       </div>
 
-      <div th:if="${contact}" class="major_sub">
+      <div th:if="${contact}" class="major_sub" style="margin-top: 5rem">
         <div class="container text-center">
           <img style="height: 150px; width: 150px" src="" class="show_contact_img" th:src="@{'/image/'+${contact.image}}" alt="" />
           <div>
@@ -52,6 +52,7 @@
           </table>
 
           <div class="container text-center">
+            About:
             <th:block th:utext="${contact.description}"> </th:block>
           </div>
           <div class="container mt-3">

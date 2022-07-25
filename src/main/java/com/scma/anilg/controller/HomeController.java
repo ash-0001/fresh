@@ -33,19 +33,19 @@ public class HomeController {
 	
 	@GetMapping(value={"/", "/home"})
 	public String home(Model model) {
-		model.addAttribute("title", " Home : smart contact Manager");
+		model.addAttribute("title", " Home : Employ Management");
 		return "home";
 	}
 	
 	@GetMapping("/about")
 	public String about(Model model) {
-		model.addAttribute("title", "About : Smart contact Manager");
+		model.addAttribute("title", "About : Employ Management");
 		return "about";
 	}
 	
 	@GetMapping("/signup")
 	public String signup(Model model) {
-		model.addAttribute("title","Register : Smart contact manager");
+		model.addAttribute("title","Register : Employ Management");
 		model.addAttribute("user", new User());
 		return "signup";
 	}
@@ -86,12 +86,12 @@ public class HomeController {
 			session.setAttribute("message", new Message("ohhh..!"+e.getMessage(), "alert-danger") );
 			return "signup";
 		}
-		return "signup";
+		return  "redirect:/signin";
 	}
 	
 	@GetMapping("/signin")
 	public String login(Model model) {
-		model.addAttribute("title", "Login : Smart contact Manager");
+		model.addAttribute("title", "Login : Employ Manager");
 		return "login";
 	}
 	
